@@ -5,16 +5,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "typecheck": "tsc --noEmit --incremental false",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "release": "standard-version",
+    "push-release": "git push --follow-tags origin master",
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "tailwind-merge": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.12",
     "@types/react": "17.0.38",
+    "@types/tailwindcss": "^3.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.7.0",
     "eslint-config-next": "^12.0.8",
@@ -23,6 +38,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "postcss": "^8.4.5",
     "prettier-plugin-tailwindcss": "^0.1.4",
+    "standard-version": "^9.3.2",
     "tailwindcss": "^3.0.16",
     "typescript": "4.5.5"
   }
