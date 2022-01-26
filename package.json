@@ -13,8 +13,7 @@
     "format:check": "prettier -c .",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin master",
-    "postbuild": "next-sitemap",
-    "prepare": "husky install"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -36,6 +35,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "next-sitemap": "^2.0.7",
     "postcss": "^8.4.5",
     "prettier-plugin-tailwindcss": "^0.1.4",
     "standard-version": "^9.3.2",
