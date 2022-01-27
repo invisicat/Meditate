@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align=center>Meditate</h1>
+<p align=center>
+  <img src="https://img.shields.io/github/checks-status/RiceCX/Meditate/master?style=for-the-badge" />
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/RiceCX/Meditate?style=for-the-badge">
+  <img alt="GitHub" src="https://img.shields.io/github/license/RiceCX/Meditate?style=for-the-badge">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/RiceCX/Meditate?style=for-the-badge">
+</p>
+<p align=center>A modern meditation web app for you to meditate on your own terms. Track your progress and share your thoughts with others. </p>
 
-## Getting Started
+## Table of Contents
+- [Tech stack 📚](#tech-stack---)
+  * [Frontend](#frontend)
+  * [Backend](#backend)
+- [Deployment](#deployment)
+- [Contributions](#contributions)
+- [License](#license)
 
-First, run the development server:
+## Tech stack 📚
+This website built with [Next.js]() as the framework alongside multiple libraries.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Frontend
+- React
+- TailwindCSS
+- Next.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend
+- Prisma
+- PostgreSQL
+- Vercel (Docker for local development)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Deployment
+To deploy this web app, you can either use Vercel:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRiceCX%2FMeditate&env=POSTGRES_USER,POSTGRES_PASSWORD,POSTGRES_DB,DB_HOST,DB_PORT,DB_SCHEMA&envDescription=Postgres%20authentication)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Or use [Docker]() and [docker-compose]() once you clone the website to your local computer.
 
-## Learn More
+If you are using docker, make sure you do `yarn install` in order to install all of the dependencies needed.
+Afterwards you are now able to run `yarn docker:db` and `yarn dev` or `yarn build` & `yarn start`.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributions
+Feel free to contribute! Contributors are welcome to make adjustments or add features that seem cool!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
+Copyright (c) 2022 RiceCX
 
-## Deploy on Vercel
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
