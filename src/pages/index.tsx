@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 import Button from '@/components/button/Button';
@@ -6,7 +7,6 @@ import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
 
 import clsxm from '../lib/clsxm';
-import Link from 'next/link';
 
 const Home: NextPage = () => {
   const { ref, inView } = useInView();

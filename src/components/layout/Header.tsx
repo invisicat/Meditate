@@ -13,6 +13,7 @@ const Header = () => {
       <div className="layout flex h-14 items-center justify-between mx-4">
         <UnstyledLink
           href="/"
+          openNewTab={false}
           className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-spray-400 to-spray-800 transition-colors duration-300 hover:text-spray-900"
         >
           meditate.app

@@ -8,6 +8,7 @@ module.exports = {
         primary: ['"Josefin Sans"', ...fontFamily.sans],
         display: ['"Josefin Sans"', ...fontFamily.sans],
         body: ['"Josefin Sans"', ...fontFamily.sans],
+        sans: ['"Josefin Sans"', ...fontFamily.sans],
       },
       colors: {
         spray: {
