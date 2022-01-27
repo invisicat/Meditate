@@ -13,7 +13,8 @@
     "format:check": "prettier -c .",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin master",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "docker:db": "docker-compose -f docker-compose.db.yml up -d"
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
