@@ -16,6 +16,7 @@
     "no-unused-vars": "off",
     "no-console": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
 
     "react/display-name": "off",
     "react/jsx-curly-brace-presence": [
