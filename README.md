@@ -8,27 +8,32 @@
 <p align=center>A modern meditation web app for you to meditate on your own terms. Track your progress and share your thoughts with others. </p>
 
 ## Table of Contents
+
 - [Tech stack 📚](#tech-stack---)
-  * [Frontend](#frontend)
-  * [Backend](#backend)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
 - [Deployment](#deployment)
 - [Contributions](#contributions)
 - [License](#license)
 
 ## Tech stack 📚
+
 This website built with [Next.js]() as the framework alongside multiple libraries.
 
 ### Frontend
+
 - React
 - TailwindCSS
 - Next.js
 
 ### Backend
+
 - Prisma
 - PostgreSQL
 - Vercel (Docker for local development)
 
 ## Deployment
+
 To deploy this web app, you can either use Vercel:
 
 > [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRiceCX%2FMeditate&env=POSTGRES_USER,POSTGRES_PASSWORD,POSTGRES_DB,DB_HOST,DB_PORT,DB_SCHEMA&envDescription=Postgres%20authentication)
@@ -38,11 +43,14 @@ Or use [Docker]() and [docker-compose]() once you clone the website to your loca
 If you are using docker, make sure you do `yarn install` in order to install all of the dependencies needed.
 Afterwards you are now able to run `yarn docker:db` and `yarn dev` or `yarn build` & `yarn start`.
 
-
 ## Contributions
-Feel free to contribute! Contributors are welcome to make adjustments or add features that seem cool!
+
+Feel free to contribute! Contributors are welcome to make adjustments or add features that seem cool! If you feel appriciative or like my work. Please consider donating! It helps a ton
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M026ALH)
 
 ## License
+
 Copyright (c) 2022 RiceCX
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
