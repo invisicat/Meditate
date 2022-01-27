@@ -17,7 +17,11 @@ export type UnstyledLinkProps = {
  */
 const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   ({ children, href, openNewTab, className, nextLinkProps, ...rest }, ref) => {
-    const isNewTab = openNewTab != null || href.startsWith('/');
+    const isNewTab =
+      openNewTab !== undefined
+        ? openNewTab
+        : href && !href.startsWith('/') && !href.startsWith('#');
+
     if (!isNewTab) {
       return (
         <Link href={href} {...nextLinkProps}>
