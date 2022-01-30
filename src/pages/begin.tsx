@@ -1,16 +1,12 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-import getCurrentTime from '@/lib/getCurrentTime';
+import { FormsList } from '@/lib/Forms';
 
-import Button from '@/components/button/Button';
+import FormWrap from '@/components/forms/FormWrapper';
 import Layout from '@/components/layout/Layout';
 
 import SEO from '../components/SEO';
-import FormWrap from '@/components/forms/FormWrapper';
-import Start from '@/components/forms/start/Start';
-import { FormItem, FormsList } from '@/lib/Forms';
-import { atom, useAtom } from 'jotai';
-import { useEffect, useState } from 'react';
 
 const variant = {
   hidden: {
@@ -27,9 +23,8 @@ const variant = {
 };
 
 const BeginPage = () => {
-  const [form, setForm] = useState(FormsList[0]);
-
   const [current, setCurrent] = useState(0);
+  const [form, setForm] = useState(FormsList[current]);
 
   const handleNext = () => {
     setCurrent((c) => {
@@ -37,9 +32,20 @@ const BeginPage = () => {
 
       return ++c;
     });
-
-    setForm(FormsList[current]);
   };
+
+  const handlePrev = () => {
+    setCurrent((c) => {
+      if (c <= 0) return c;
+
+      return --c;
+    });
+  };
+
+  useEffect(() => {
+    console.log('RERENDER WITH INDEX ' + current);
+    setForm(FormsList[current]);
+  }, [current]);
 
   return (
     <Layout>
@@ -54,7 +60,7 @@ const BeginPage = () => {
         >
           <div className="layout flex min-h-screen flex-col items-center text-center">
             <FormWrap>
-              <form.component continue={handleNext} />
+              <form.component continue={handleNext} back={handlePrev} />
             </FormWrap>
           </div>
         </motion.section>

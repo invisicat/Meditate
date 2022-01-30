@@ -4,7 +4,7 @@ const Test = (props: FormProps) => {
   return (
     <>
       <h1>Hi!</h1>
-      <button onClick={props.continue}>Go back</button>
+      <button onClick={props.back}>Go back</button>
     </>
   );
 };
