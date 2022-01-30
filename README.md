@@ -1,7 +1,12 @@
 <h1 align=center>Meditate</h1>
 <p align=center>
   <img src="https://img.shields.io/github/checks-status/RiceCX/Meditate/master?style=for-the-badge" />
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/RiceCX/Meditate?style=for-the-badge">
+  <a href="https://github.com/microsoft/Typescript">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/RiceCX/Meditate?style=for-the-badge">
+  </a>
+  <a href="https://github.com/RiceCX/Meditate/graphs/contributors">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/RiceCX/Meditate?style=for-the-badge">
+  </a>
   <img alt="GitHub" src="https://img.shields.io/github/license/RiceCX/Meditate?style=for-the-badge">
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/RiceCX/Meditate?style=for-the-badge">
   <a href="https://discord.gg/qvKEPrgTEt">
