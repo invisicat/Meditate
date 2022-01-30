@@ -1,4 +1,6 @@
-import { FiGithub, FiMoon } from 'react-icons/fi';
+import { FiCloudSnow, FiGithub, FiMoon } from 'react-icons/fi';
+
+import useDarkMode from '@/lib/theme/useDarkMode';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 const links = [
@@ -8,6 +10,13 @@ const links = [
 ];
 
 const Header = () => {
+  const [theme, setTheme] = useDarkMode();
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    void new Audio('/audio/pop.mp3').play();
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white">
       <div className="layout flex h-14 items-center justify-between mx-4">
@@ -31,11 +40,23 @@ const Header = () => {
             </ul>
           </nav>
           <div className="flex items-center border-l border-slate-200 mx-2 dark:border-slate-800 justify-evenly">
-            <div className="mx-2">
-              <FiMoon className="w-6 h-6" />
+            <div
+              className="mx-2 hover:bg-gray-200 hover:cursor-pointer rounded-lg p-1"
+              onClick={toggleTheme}
+            >
+              {theme == 'light' ? (
+                <FiMoon className="w-6 h-6" />
+              ) : (
+                <FiCloudSnow className="w-6 h-6" />
+              )}
             </div>
-            <div>
-              <FiGithub className="w-6 h-6" />
+            <div className="hover:bg-gray-200 rounded-lg p-1">
+              <UnstyledLink
+                href="https://github.com/RiceCX/Meditate"
+                openNewTab
+              >
+                <FiGithub className="w-6 h-6 " />
+              </UnstyledLink>
             </div>
           </div>
         </div>

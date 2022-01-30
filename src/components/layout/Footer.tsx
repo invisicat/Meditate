@@ -1,4 +1,4 @@
-import { ImFacebook, ImGithub, ImTwitter } from 'react-icons/im';
+import { ImGithub } from 'react-icons/im';
 
 import UnstyledLink from '../links/UnstyledLink';
 

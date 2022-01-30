@@ -2,6 +2,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -26,7 +27,7 @@ module.exports = {
         },
       },
       animation: {
-        fadeIn: 'wipe-enter 1s 1',
+        fadeIn: 'fadeIn 1s 1',
       },
       keyframes: {
         fadeIn: {

@@ -6,9 +6,11 @@ import Button from '@/components/button/Button';
 import Layout from '@/components/layout/Layout';
 
 import SEO from '../components/SEO';
+import FormWrap from '@/components/forms/FormWrapper';
+import Start from '@/components/forms/start/Start';
+import { FormItem, FormsList } from '@/lib/Forms';
 import { atom, useAtom } from 'jotai';
-import { atomWithToggle } from '@/lib/atoms/atomWithToggle';
-import { setTimeout } from 'timers/promises';
+import { useEffect, useState } from 'react';
 
 const variant = {
   hidden: {
@@ -25,38 +27,35 @@ const variant = {
 };
 
 const BeginPage = () => {
+  const [form, setForm] = useState(FormsList[0]);
+
+  const [current, setCurrent] = useState(0);
+
+  const handleNext = () => {
+    setCurrent((c) => {
+      if (c >= FormsList.length - 1) return c;
+
+      return ++c;
+    });
+
+    setForm(FormsList[current]);
+  };
+
   return (
     <Layout>
       <SEO />
       <main>
         <motion.section
           initial="hidden"
+          transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
           animate="visible"
           variants={variant}
           className="bg-white"
         >
           <div className="layout flex min-h-screen flex-col items-center text-center">
-            <div className="shadow-2xl flex flex-col m-8 p-3 justify-between rounded-md">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-4xl leading-normal font-semibold mt-2 ">
-                  {getCurrentTime()}
-                </h1>
-                <p>
-                  Thats great that you are here! 🤗 Are you ready to meditate?
-                </p>
-              </div>
-              <div className="flex flex-col text-gray-800 my-3 py-2">
-                <Button className="my-2" variant="dark">
-                  Yes
-                </Button>
-                <Button className="my-2" variant="dark">
-                  No
-                </Button>
-                <Button className="my-2" variant="dark">
-                  Maybe
-                </Button>
-              </div>
-            </div>
+            <FormWrap>
+              <form.component continue={handleNext} />
+            </FormWrap>
           </div>
         </motion.section>
       </main>
