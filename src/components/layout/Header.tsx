@@ -39,7 +39,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center border-l border-slate-200 mx-2 dark:border-slate-800 justify-evenly">
+          <div className="flex items-center border-l border-slate-200 mx-2 dark:border-gray-600 justify-evenly">
             <div
               className="mx-2 hover:bg-gray-200 hover:cursor-pointer rounded-lg p-1"
               onClick={toggleTheme}

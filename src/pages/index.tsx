@@ -15,12 +15,12 @@ const Home: NextPage = () => {
     <Layout>
       <SEO />
       <main>
-        <section className="bg-white">
+        <section className="bg-gradient-to-bl from-spray-800 via-slate-400 to-transparent dark:from-gray-900 dark:to-gray-800 ">
           <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 layout flex min-h-screen flex-col items-center text-center">
-            <h1 className="text-7xl leading-normal font-semibold mt-2 ">
+            <h1 className="text-7xl leading-normal font-semibold mt-2 dark:text-white">
               Meditate
             </h1>
-            <p className="mt-2 text-lg leading-7 text-gray-800 max-w-md">
+            <p className="mt-2 text-lg leading-7 text-gray-800 dark:text-white max-w-md">
               A modern <span className="font-semibold">meditation</span> app for
               you to meditate on your own terms. Track your{' '}
               <span className="font-semibold">progress</span>, and share your
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="bg-white">
+        <section className="dark:from-gray-900 dark:to-gray-800">
           <div
             className={clsxm(
               'layout flex min-h-screen flex-col items-center text-center transition-all',
