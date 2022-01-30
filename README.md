@@ -4,6 +4,9 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/RiceCX/Meditate?style=for-the-badge">
   <img alt="GitHub" src="https://img.shields.io/github/license/RiceCX/Meditate?style=for-the-badge">
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/RiceCX/Meditate?style=for-the-badge">
+  <a href="https://discord.gg/qvKEPrgTEt">
+    <img alt="Discord" src="https://img.shields.io/discord/876733036471914536?color=%2313CDD1&style=for-the-badge">
+  </a>
 </p>
 <p align=center>A modern meditation web app for you to meditate on your own terms. Track your progress and share your thoughts with others. </p>
 
