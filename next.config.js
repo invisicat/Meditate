@@ -4,6 +4,9 @@ const nextConfig = {
   eslint: {
     dirs: ['src'],
   },
+  images: {
+    domains: ['picsum.photos'],
+  },
 };
 
 module.exports = nextConfig;

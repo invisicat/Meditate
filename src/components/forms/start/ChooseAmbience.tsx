@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 
 import useMeditationStore from '@/lib/atoms/formAtom';
 import { FormProps } from '@/lib/Forms';
+import useDarkMode from '@/lib/theme/useDarkMode';
+
+import FormTemplate from '../FormTemplate';
 
 export type Times =
   | 0
@@ -70,10 +73,10 @@ const ChooseAmbience = (props: FormProps) => {
   };
 
   return (
-    <div className="flex flex-col">
+    <FormTemplate className="flex flex-col">
       <h1 className="text-5xl">Choose Ambience</h1>
       <p>Choose an ambience to play with. (Selected {ambiences.length})</p>
-      <div className="grid md:grid-cols-6 sm:grid-cols-2 gap-4 ">
+      <div className="grid md:grid-cols-6 sm:grid-cols-2 gap-4">
         {Selection.map((ambience, idx) => (
           <AmbientMusicComponent
             key={idx}
@@ -99,7 +102,7 @@ const ChooseAmbience = (props: FormProps) => {
           Next
         </button>
       </div>
-    </div>
+    </FormTemplate>
   );
 };
 
@@ -112,14 +115,15 @@ type AmbientMusicComponentProps = {
 
 const AmbientMusicComponent = ({
   ambience,
-  className,
   addAmbience,
   removeAmbience,
   defaultSelected = false,
   ...rest
 }: AmbientMusicComponentProps) => {
+  const [theme, setTheme] = useDarkMode();
   const [playing, setPlaying] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const checkRef = useRef<HTMLInputElement>(null);
 
   const handleSelection = (event: HTMLInputElement) => {
     event.checked ? addAmbience(ambience) : removeAmbience(ambience);
@@ -151,7 +155,7 @@ const AmbientMusicComponent = ({
 
   return (
     <div
-      className="flex flex-col m-3 p-2 hover:bg-gray-300 rounded-lg shadow-md"
+      className="flex flex-col m-3 p-2 hover:bg-gray-300 dark:bg-slate-600 dark:hover:bg-gray-800 rounded-lg shadow-md"
       {...rest}
     >
       <input
@@ -159,18 +163,18 @@ const AmbientMusicComponent = ({
         type="checkbox"
         onChange={(e) => handleSelection(e.currentTarget)}
         defaultChecked={defaultSelected}
+        ref={checkRef}
       />
-      {playing ? (
-        <AiFillPauseCircle
-          className="w-12 h-12 self-center m-4 hover:cursor-pointer"
-          onClick={handlePlayback}
-        />
-      ) : (
-        <AiFillPlayCircle
-          className="w-12 h-12 self-center m-4 hover:cursor-pointer"
-          onClick={handlePlayback}
-        />
-      )}
+      <button
+        className="self-center w-12 h-12 m-4 hover:cursor-pointer"
+        onClick={handlePlayback}
+      >
+        {playing ? (
+          <AiFillPauseCircle className="w-12 h-12" />
+        ) : (
+          <AiFillPlayCircle className="w-12 h-12" />
+        )}
+      </button>
       <p>
         <span className="font-bold">{ambience.name}</span>
       </p>

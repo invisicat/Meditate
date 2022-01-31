@@ -1,10 +1,11 @@
 import Button from '@/components/button/Button';
 import { FormProps } from '@/lib/Forms';
 import getCurrentTime from '@/lib/getCurrentTime';
+import FormTemplate from '../FormTemplate';
 
 const Start = (props: FormProps) => {
   return (
-    <>
+    <FormTemplate>
       <div className="flex flex-col justify-center">
         <h1 className="text-4xl leading-normal font-semibold mt-2 ">
           {getCurrentTime()}
@@ -22,7 +23,7 @@ const Start = (props: FormProps) => {
           Maybe
         </Button>
       </div>
-    </>
+    </FormTemplate>
   );
 };
 

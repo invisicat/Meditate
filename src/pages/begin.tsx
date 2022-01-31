@@ -43,7 +43,6 @@ const BeginPage = () => {
   };
 
   useEffect(() => {
-    console.log('RERENDER WITH INDEX ' + current);
     setForm(FormsList[current]);
   }, [current]);
 
@@ -56,7 +55,7 @@ const BeginPage = () => {
           transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
           animate="visible"
           variants={variant}
-          className="bg-white"
+          className="bg-white dark:bg-slate-900"
         >
           <div className="layout flex min-h-screen flex-col items-center text-center">
             <FormWrap>
