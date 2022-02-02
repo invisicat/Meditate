@@ -1,6 +1,8 @@
-import Button from '@/components/button/Button';
 import { FormProps } from '@/lib/Forms';
 import getCurrentTime from '@/lib/getCurrentTime';
+
+import Button from '@/components/button/Button';
+
 import FormTemplate from '../FormTemplate';
 
 const Start = (props: FormProps) => {

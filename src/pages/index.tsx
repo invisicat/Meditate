@@ -48,6 +48,12 @@ const Home: NextPage = () => {
       <main>
         <section className="transition duration-200 bg-gradient-to-bl from-white to-transparent dark:from-gray-900 dark:to-gray-800">
           <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 layout flex min-h-screen flex-col items-center text-center">
+            <Image
+              src="/svg/Meditate.svg"
+              alt="Meditate Icon"
+              width={196}
+              height={196}
+            />
             <h1 className="text-7xl leading-normal font-semibold mt-2 dark:text-white">
               Meditate
             </h1>

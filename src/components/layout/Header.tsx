@@ -1,8 +1,12 @@
+import Image from 'next/image';
 import { FiCloudSnow, FiGithub, FiMoon } from 'react-icons/fi';
 
 import useDarkMode from '@/lib/theme/useDarkMode';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
+
+import { useMediaPredicate } from '../../lib/MediaHook';
+
 const links = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
@@ -11,6 +15,7 @@ const links = [
 
 const Header = () => {
   const [theme, setTheme] = useDarkMode();
+  const isSmallScreen = useMediaPredicate('sm');
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -20,13 +25,22 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-800 transition duration-200">
       <div className="layout flex h-14 items-center justify-between mx-4">
-        <UnstyledLink
-          href="/"
-          openNewTab={false}
-          className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-spray-400 to-spray-800 transition-colors duration-300 hover:text-spray-900 dark:hover:text-spray-500"
-        >
-          meditate.app
-        </UnstyledLink>
+        {!isSmallScreen ? (
+          <Image
+            src="/svg/Meditate.svg"
+            alt="Meditate icon"
+            width={32}
+            height={32}
+          />
+        ) : (
+          <UnstyledLink
+            href="/"
+            openNewTab={false}
+            className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-spray-400 to-spray-800 transition-colors duration-300 hover:text-spray-900 dark:hover:text-spray-500"
+          >
+            meditate.app
+          </UnstyledLink>
+        )}
         <div className="flex items-center">
           <nav>
             <ul className="flex items-center justify-between space-x-4">

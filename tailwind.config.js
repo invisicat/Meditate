@@ -29,6 +29,8 @@ module.exports = {
       },
       animation: {
         fadeIn: 'fadeIn 1s 1',
+        grow: 'grow 3s linear fowards infinite',
+        shrink: 'shrink 3s linear forwards infinite',
       },
       keyframes: {
         fadeIn: {

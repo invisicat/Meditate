@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import '@/scripts/wdyr';
 
 import '@/styles/globals.css';
 
