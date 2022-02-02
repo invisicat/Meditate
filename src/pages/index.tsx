@@ -8,6 +8,7 @@ import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
 
 import clsxm from '../lib/clsxm';
+import useDarkMode from '@/lib/theme/useDarkMode';
 
 type PredictionResults = {
   icon: string;
@@ -39,6 +40,7 @@ const Results: PredictionResults[] = [
 
 const Home: NextPage = () => {
   const { ref, inView } = useInView();
+  const [dark, setDark] = useDarkMode();
 
   return (
     <Layout>
@@ -57,13 +59,13 @@ const Home: NextPage = () => {
             </p>
             <div ref={ref} className="mt-8">
               <Button className="text-sm leading-5 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden rounded-lg group bg-gradient-to-br from-orange-400 to-spray-800 group-hover:from-spray-300 group-hover:to-spray-800 hover:text-white dark:text-white focus:ring-4 focus:ring-spray-300 dark:focus:ring-spray-800">
-                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md dark:text-white group-hover:bg-opacity-0 text-gray-800">
                   Join now
                 </span>
               </Button>
               <Link href="/begin" passHref>
                 <Button className="text-sm leading-5 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden rounded-lg group bg-gradient-to-br from-spray-300 to-spray-800 group-hover:from-spray-300 group-hover:to-spray-800 hover:text-white dark:text-white focus:ring-4 focus:ring-spray-300 dark:focus:ring-spray-800">
-                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white text-gray-800 dark:text-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     Start meditating
                   </span>
                 </Button>

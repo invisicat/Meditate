@@ -10,17 +10,20 @@ const Start = (props: FormProps) => {
         <h1 className="text-4xl leading-normal font-semibold mt-2 ">
           {getCurrentTime()}
         </h1>
-        <p>Thats great that you are here! 🤗 Are you ready to meditate?</p>
+        <p className="max-w-md">
+          Thats great that you are here! 🤗 Before you start, lets make your
+          meditation session perfect.
+        </p>
       </div>
       <div className="flex flex-col text-gray-800 my-3 py-2">
         <Button className="my-2" variant="dark" onClick={props.continue}>
-          Yes
+          Continue 👉
         </Button>
         <Button className="my-2" variant="dark">
-          No
+          Let&apos;s go with the defaults! 🎞
         </Button>
         <Button className="my-2" variant="dark">
-          Maybe
+          Surprise me! 🎊
         </Button>
       </div>
     </FormTemplate>
