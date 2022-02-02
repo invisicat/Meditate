@@ -1,4 +1,7 @@
-<h1 align=center>Meditate</h1>
+<p align=center>
+  <img align=center src="/public/svg/Meditate.svg" width=256 height=256 />
+  <h1 align=center>Meditate</h1>
+</p>
 <p align=center>
   <img src="https://img.shields.io/github/checks-status/RiceCX/Meditate/master?style=for-the-badge" />
   <a href="https://github.com/microsoft/Typescript">
