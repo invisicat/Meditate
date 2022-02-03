@@ -57,7 +57,7 @@ const BeginPage = () => {
           variants={variant}
           className="bg-white dark:bg-slate-900"
         >
-          <div className="layout flex min-h-screen flex-col items-center text-center">
+          <div className="pt-14 layout flex min-h-screen flex-col items-center text-center">
             <FormWrap>
               <form.component continue={handleNext} back={handlePrev} />
             </FormWrap>

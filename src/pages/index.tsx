@@ -9,6 +9,7 @@ import SEO from '@/components/SEO';
 
 import clsxm from '../lib/clsxm';
 import useDarkMode from '@/lib/theme/useDarkMode';
+import Header from '@/components/layout/Header';
 
 type PredictionResults = {
   icon: string;
@@ -46,11 +47,12 @@ const Home: NextPage = () => {
     <Layout>
       <SEO />
       <main>
-        <section className="transition duration-200 bg-gradient-to-bl from-white to-transparent dark:from-gray-900 dark:to-gray-800">
+        <section className="transition duration-200 bg-gradient-to-bl from-white to-transparent dark:bg-radial-at-r dark:from-sky-400 dark:to-indigo-900">
           <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 layout flex min-h-screen flex-col items-center text-center">
             <Image
               src="/svg/Meditate.svg"
               alt="Meditate Icon"
+              className="shadow-lg"
               width={196}
               height={196}
             />

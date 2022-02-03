@@ -22,9 +22,10 @@ const Header = () => {
     void new Audio('/audio/pop.mp3').play();
   };
 
+  // margin hack below: please lmk if theres a better way of doing this 🙂
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-800 transition duration-200">
-      <div className="layout flex h-14 items-center justify-between mx-4">
+    <header className="sticky -mb-14 top-0 z-50 bg-transparent">
+      <div className="flex flex-row layout h-14 items-center justify-between mx-4">
         {!isSmallScreen ? (
           <Image
             src="/svg/Meditate.svg"
