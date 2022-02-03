@@ -57,6 +57,10 @@ module.exports = {
         'radial-at-br':
           'radial-gradient(ellipse at bottom right, var(--tw-gradient-stops))',
       },
+      filter: {
+        inverted:
+          'grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg)',
+      },
       animation: {
         fadeIn: 'fadeIn 1s 1',
         grow: 'grow 3s linear fowards infinite',

@@ -15,6 +15,7 @@
   <a href="https://discord.gg/qvKEPrgTEt">
     <img alt="Discord" src="https://img.shields.io/discord/876733036471914536?color=%2313CDD1&style=for-the-badge">
   </a>
+<a href="https://wakatime.com/badge/user/26e59af8-908b-4e22-beb7-3ee7031c19d6/project/04e33749-fb50-4f7d-93d2-b2792cfb7378"><img src="https://wakatime.com/badge/user/26e59af8-908b-4e22-beb7-3ee7031c19d6/project/04e33749-fb50-4f7d-93d2-b2792cfb7378.svg?style=for-the-badge" alt="wakatime"></a>
 </p>
 <p align=center>A modern meditation web app for you to meditate on your own terms. Track your progress and share your thoughts with others. </p>
 
